@@ -33,3 +33,12 @@ btn.addEventListener('click', function () {
     DOMUsername.value = DOMAge.value = '';
 });
 console.log(UserFactory.users);
+var item = {
+    id: 1,
+    name: '',
+    price: 1000,
+    description: '',
+    type: '',
+    img: '',
+    getTotalPrice: function (value) { }
+};

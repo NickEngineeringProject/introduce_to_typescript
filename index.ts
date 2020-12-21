@@ -42,3 +42,48 @@ btn.addEventListener('click', () => {
 })
 
 console.log(UserFactory.users)
+
+type DefaultColor = 'blue' | 'red' | 'green'
+
+// type Product = {
+//     readonly id: number,
+//     name: string,
+//     price: number,
+//     description?: string
+// }
+//
+// const food: Product = {
+//     id: 0, name: "bread", price: 0
+// }
+//
+// const products: Product[] = []
+// products.push(<Product>food)
+
+
+
+interface Product extends ProductType, ProductImage {
+    readonly id: number,
+    name: string,
+    price: number,
+    description?: string,
+    getTotalPrice: (value: number) => void
+
+}
+
+interface ProductType {
+    type: string
+}
+
+interface ProductImage {
+    img: string
+}
+
+const item: Product = {
+    id: 1,
+    name: '',
+    price: 1000,
+    description: '',
+    type: '',
+    img: '',
+    getTotalPrice: (value: number):void => {}
+}
